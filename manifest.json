@@ -1,0 +1,35 @@
+  {
+    "name": "Email Sorter",
+    "description": "Quick and easy sort for emails!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "blue-email-box-circle-png-transparent-icon-2.png",
+            "48": "blue-email-box-circle-png-transparent-icon-2.png",
+            "128": "Untitled.png"
+        }
+    },
+    "icons": {
+        "16": "blue-email-box-circle-png-transparent-icon-2.png",
+        "48": "blue-email-box-circle-png-transparent-icon-2.png",
+        "128": "Untitled.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "popup.js"
+            ]
+        }
+    ]
+}
